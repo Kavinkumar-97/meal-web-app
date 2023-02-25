@@ -19,6 +19,8 @@ async function fetchDetail(id) {
             const meal = responseJson.meals[0];
             console.log(meal);
 
+            document.title = meal.strMeal;
+
             mealDetail = meal;
             updateMealDetail(mealDetail);
         }
