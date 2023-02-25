@@ -2,6 +2,8 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 const title = params.get("title");
 
+document.title = title;
+
 const mealDetailSection = document.getElementById('meal-details-section');
 
 let mealDetail = null;
@@ -52,7 +54,7 @@ function updateMealDetail(mealDetail) {
     mealInstructionList.setAttribute('id', 'meal-instruction-list');
     mealInstructionTitle.innerText = 'Instructions';
 
-    const instructions = mealDetail.strInstructions.split('\r\n').filter(ins => ins.length > 0);
+    const instructions = mealDetail.strInstructions.split('\r\n').filter(ins => ins.length > 0 && !ins.toLowerCase().includes('step'));
 
     instructions.forEach((instruction, index) => {
         const instructionListItem = document.createElement('div');
