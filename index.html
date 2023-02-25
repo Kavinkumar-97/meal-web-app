@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meal</title>
+        
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+
+    <body>
+        <header id="meal-header-section" class="expand">
+            <!-- <a href="#">Meal App</a> -->
+            <form id="search-form">
+                <input id="search-input" type="text" placeholder="Search for meal" required>
+                <button id="search-btn">Search</button>
+            </form>
+            <!-- <a id="favourites-link" href="#">Favorites</a> -->
+        </header>
+
+        <main id="meal-section">
+            <section id="meal-list">
+                <!-- <a id="52977" class="meal-link" href="./meal-details?id=52977">
+                    <div class="meal-container">
+                        <div class="meal-header">
+                            <img src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg"
+                                class="meal-image">
+                            <button class="meal-favourite-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="meal-content">
+                            <p class="meal-title">Corba</p>
+                            <p class="meal-category">Side</p>
+                            <p class="meal-area">Turkish</p>
+                        </div>
+                    </div>
+                </a><a id="53026" class="meal-link" href="./meal-details?id=53026">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/n3xxd91598732796.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Tamiya</p>
+                            <p class="meal-category">Vegetarian</p>
+                            <p class="meal-area">Egyptian</p>
+                        </div>
+                    </div>
+                </a><a id="52785" class="meal-link" href="./meal-details?id=52785">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Dal fry</p>
+                            <p class="meal-category">Vegetarian</p>
+                            <p class="meal-area">Indian</p>
+                        </div>
+                    </div>
+                </a><a id="52844" class="meal-link" href="./meal-details?id=52844">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Lasagne</p>
+                            <p class="meal-category">Pasta</p>
+                            <p class="meal-area">Italian</p>
+                        </div>
+                    </div>
+                </a><a id="52971" class="meal-link" href="./meal-details?id=52971">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/1bsv1q1560459826.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Kafteji</p>
+                            <p class="meal-category">Vegetarian</p>
+                            <p class="meal-area">Tunisian</p>
+                        </div>
+                    </div>
+                </a><a id="53013" class="meal-link" href="./meal-details?id=53013">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Big Mac</p>
+                            <p class="meal-category">Beef</p>
+                            <p class="meal-area">American</p>
+                        </div>
+                    </div>
+                </a><a id="53027" class="meal-link" href="./meal-details?id=53027">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/4er7mj1598733193.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Koshari</p>
+                            <p class="meal-category">Vegetarian</p>
+                            <p class="meal-area">Egyptian</p>
+                        </div>
+                    </div>
+                </a><a id="52769" class="meal-link" href="./meal-details?id=52769">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/sxysrt1468240488.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Kapsalon</p>
+                            <p class="meal-category">Lamb</p>
+                            <p class="meal-area">Dutch</p>
+                        </div>
+                    </div>
+                </a><a id="52854" class="meal-link" href="./meal-details?id=52854">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Pancakes</p>
+                            <p class="meal-category">Dessert</p>
+                            <p class="meal-area">American</p>
+                        </div>
+                    </div>
+                </a><a id="52906" class="meal-link" href="./meal-details?id=52906">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/wssvvs1511785879.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Flamiche</p>
+                            <p class="meal-category">Vegetarian</p>
+                            <p class="meal-area">French</p>
+                        </div>
+                    </div>
+                </a><a id="52980" class="meal-link" href="./meal-details?id=52980">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/hyarod1565090529.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Stamppot</p>
+                            <p class="meal-category">Pork</p>
+                            <p class="meal-area">Dutch</p>
+                        </div>
+                    </div>
+                </a><a id="53006" class="meal-link" href="./meal-details?id=53006">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/ctg8jd1585563097.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Moussaka</p>
+                            <p class="meal-category">Beef</p>
+                            <p class="meal-area">Greek</p>
+                        </div>
+                    </div>
+                </a><a id="53028" class="meal-link" href="./meal-details?id=53028">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/kcv6hj1598733479.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Shawarma</p>
+                            <p class="meal-category">Chicken</p>
+                            <p class="meal-area">Egyptian</p>
+                        </div>
+                    </div>
+                </a><a id="52811" class="meal-link" href="./meal-details?id=52811">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/xrrwpx1487347049.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Ribollita</p>
+                            <p class="meal-category">Vegetarian</p>
+                            <p class="meal-area">Italian</p>
+                        </div>
+                    </div>
+                </a><a id="52871" class="meal-link" href="./meal-details?id=52871">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/wrustq1511475474.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Yaki Udon</p>
+                            <p class="meal-category">Vegetarian</p>
+                            <p class="meal-area">Japanese</p>
+                        </div>
+                    </div>
+                </a><a id="52931" class="meal-link" href="./meal-details?id=52931">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/yrstur1511816601.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Sugar Pie</p>
+                            <p class="meal-category">Dessert</p>
+                            <p class="meal-area">Canadian</p>
+                        </div>
+                    </div>
+                </a><a id="52963" class="meal-link" href="./meal-details?id=52963">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/g373701551450225.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Shakshuka</p>
+                            <p class="meal-category">Vegetarian</p>
+                            <p class="meal-area">Egyptian</p>
+                        </div>
+                    </div>
+                </a><a id="52774" class="meal-link" href="./meal-details?id=52774">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/uuuspp1468263334.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Pad See Ew</p>
+                            <p class="meal-category">Chicken</p>
+                            <p class="meal-area">Thai</p>
+                        </div>
+                    </div>
+                </a><a id="52832" class="meal-link" href="./meal-details?id=52832">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/qstyvs1505931190.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Coq au vin</p>
+                            <p class="meal-category">Chicken</p>
+                            <p class="meal-area">French</p>
+                        </div>
+                    </div>
+                </a><a id="52901" class="meal-link" href="./meal-details?id=52901">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/tqrrsq1511723764.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Rock Cakes</p>
+                            <p class="meal-category">Dessert</p>
+                            <p class="meal-area">British</p>
+                        </div>
+                    </div>
+                </a><a id="52933" class="meal-link" href="./meal-details?id=52933">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/ruwpww1511817242.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Rappie Pie</p>
+                            <p class="meal-category">Chicken</p>
+                            <p class="meal-area">Canadian</p>
+                        </div>
+                    </div>
+                </a><a id="52947" class="meal-link" href="./meal-details?id=52947">
+                    <div class="meal-container">
+                        <div class="meal-header"><img src="https://www.themealdb.com/images/media/meals/1525874812.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Ma Po Tofu</p>
+                            <p class="meal-category">Beef</p>
+                            <p class="meal-area">Chinese</p>
+                        </div>
+                    </div>
+                </a><a id="53029" class="meal-link" href="./meal-details?id=53029">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/x372ug1598733932.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Mulukhiyah</p>
+                            <p class="meal-category">Beef</p>
+                            <p class="meal-area">Egyptian</p>
+                        </div>
+                    </div>
+                </a><a id="53049" class="meal-link" href="./meal-details?id=53049">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Apam balik</p>
+                            <p class="meal-category">Dessert</p>
+                            <p class="meal-area">Malaysian</p>
+                        </div>
+                    </div>
+                </a><a id="53051" class="meal-link" href="./meal-details?id=53051">
+                    <div class="meal-container">
+                        <div class="meal-header"><img
+                                src="https://www.themealdb.com/images/media/meals/wai9bw1619788844.jpg"
+                                class="meal-image"></div>
+                        <div class="meal-content">
+                            <p class="meal-title">Nasi lemak</p>
+                            <p class="meal-category">Seafood</p>
+                            <p class="meal-area">Malaysian</p>
+                        </div>
+                    </div>
+                </a> -->
+            </section>
+        </main>
+
+        <script src="https://kit.fontawesome.com/27b86ddd38.js" crossorigin="anonymous"></script>
+
+        <script src="scripts/index.js"></script>
+    </body>
+
+</html>
