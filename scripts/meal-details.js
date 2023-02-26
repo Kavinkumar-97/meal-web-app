@@ -1,23 +1,24 @@
+
+// Get params from the url
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 const title = params.get("title");
+let mealDetail = null;
 
 document.title = title;
 
+// Elements
 const mealDetailSection = document.getElementById('meal-details-section');
-
-let mealDetail = null;
 
 fetchDetail(id);
 
+// Fetch the meal details
 async function fetchDetail(id) {
     try {
-        console.log(id);
         if (id) {
             const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
             const responseJson = await response.json();
             const meal = responseJson.meals[0];
-            console.log(meal);
 
             document.title = meal.strMeal;
 
@@ -29,10 +30,8 @@ async function fetchDetail(id) {
     }
 }
 
+// Update the meal details in document
 function updateMealDetail(mealDetail) {
-
-    console.log()
-
     const mealImage = document.createElement('img');
     mealImage.setAttribute('id', 'meal-image');
     mealImage.setAttribute('src', mealDetail.strMealThumb);
@@ -56,6 +55,7 @@ function updateMealDetail(mealDetail) {
     mealInstructionList.setAttribute('id', 'meal-instruction-list');
     mealInstructionTitle.innerText = 'Instructions';
 
+    // Splitting the instructionz with new line and carriage return 
     const instructions = mealDetail.strInstructions.split('\r\n').filter(ins => ins.length > 0 && !ins.toLowerCase().includes('step'));
 
     instructions.forEach((instruction, index) => {

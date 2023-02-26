@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Title -->
-        <title>Meal List</title>
+        <title>Favorites</title>
 
         <!-- Fav icons -->
         <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
@@ -28,35 +28,29 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
-        
-        <!-- Stylesheet -->
+
+        <!-- Style sheet -->
         <link rel="stylesheet" href="css/app.css">
     </head>
 
     <body>
-        <!-- Header with search bar and favourites link -->
+        <!-- Header -->
         <header id="meal-header-section" class="expand">
-            <form id="search-form">
-                <input id="search-input" type="text" placeholder="Search for meal" required>
-                <button id="search-btn">Search</button>
-            </form>
-            <div id="header-actions">
-                <a id="favourites-link" href="favourites.html">Favorites</a>
-            </div>
+            <h1>Your Favorite Meals</h1>
         </header>
 
-        <!-- Main section that contains the meals list -->
+        <!-- Main section with meal list -->
         <main id="meal-section">
             <section id="meal-list">
 
             </section>
         </main>
 
-        <!-- Font awesome script -->
+        <!-- Font awesome scripts -->
         <script src="https://kit.fontawesome.com/27b86ddd38.js" crossorigin="anonymous"></script>
-
-        <!-- Our custom script -->
-        <script src="scripts/index.js"></script>
+        
+        <!-- Our Custom scripts -->
+        <script src="scripts/favourites.js"></script>
     </body>
 
 </html>

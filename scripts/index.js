@@ -1,6 +1,8 @@
-
 let favorites = JSON.parse(localStorage.getItem('favorites')) || {};
 let initialMeals = [];
+let timeOutId = null;
+
+// Elements
 
 const searchInput = document.getElementById('search-input');
 const mealsList = document.getElementById('meal-list');
@@ -10,13 +12,14 @@ const searchForm = document.getElementById('search-form');
 
 // Event listeners
 
-searchInput.addEventListener('change', (e) => {
+searchInput.addEventListener('input', (e) => {
     const searchText = e.target.value?.trim();
-    performSearch(searchText);
+    // Adding delay to reduce multiple request
+    clearTimeout(timeOutId);
+    timeOutId = setTimeout(() => performSearch(searchText), 250);
 });
 
 searchForm.addEventListener('submit', (e) => {
-    console.log('Form submission');
     e.preventDefault();
     const searchText = searchInput.value?.trim();
     performSearch(searchText);
@@ -26,8 +29,10 @@ searchInput.addEventListener('load', () => {
     performSearch(searchInput.value || 'a');
 });
 
+// For initial we will search
 performSearch(' ');
 
+// Fetch meals from "themealdb" 
 async function performSearch(searchText) {
     try {
         if (searchText) {
@@ -48,10 +53,12 @@ async function performSearch(searchText) {
     }
 }
 
+// Show empty placeholder if there is no result found
 function showEmptyPlaceholder(searchText) {
     mealsList.innerHTML = `No Result Found for ${searchText}`;
 }
 
+// Updated the meal section html
 function updateMeals(meals, searchText) {
     if (meals == null || meals.length == 0) {
         return showEmptyPlaceholder(searchText);
@@ -112,12 +119,14 @@ function updateMeals(meals, searchText) {
     }
 }
 
+// Check and remove / add to favorites
 function onTapFavourite(e, meal) {
     const isFavorite = favorites.hasOwnProperty(meal.idMeal);
 
     isFavorite ? removeFavorite(e, meal) : addFavorite(e, meal);
 }
 
+// Add favorites to the local storage
 function addFavorite(e, meal) {
     e.preventDefault();
 
@@ -132,10 +141,9 @@ function addFavorite(e, meal) {
     localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
+// Remove favorites to the local storage
 function removeFavorite(e, meal) {
     e.preventDefault();
-
-    console.log(e.target);
 
     const favButton = document.querySelector(`.meal-favourite-btn[data-id="${meal.idMeal}"]`);
     const favIcon = '<i class="fa-regular fa-heart"></i>';
