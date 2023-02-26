@@ -23,7 +23,7 @@ The Meal Web App is built using the following technologies:
 As Meal Web App is a web application, there is no need to install anything. You can simply access the application on [Meal Web App](https://kavinkumar-97.github.io/meal-web-app/) from your browser.
 
 ## API Used
-The Meal Web App uses the TheMealDB API to fetch the list of recipes and their details.
+The Meal Web App uses the [TheMealDB API](https://www.themealdb.com/api.php) to fetch the list of recipes and their details.
 
 ## Contributors
 The Meal Web App was developed by Kavinkumar. If you find any bugs or have any suggestions for improvements, please feel free to create an issue or a pull request.
